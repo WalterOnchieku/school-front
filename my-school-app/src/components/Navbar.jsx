@@ -61,6 +61,30 @@ const Navbar = () => {
         >
           Reports
         </NavLink>
+        <NavLink
+          to="/fees"
+          className={({ isActive }) =>
+            isActive ? "text-orange-500 underline font-bold" : "text-white hover:underline font-semibold"
+          }
+        >
+          Fee Structure
+        </NavLink>
+        <NavLink
+          to="/pickup-location"
+          className={({ isActive }) =>
+            isActive ? "text-orange-500 underline font-bold" : "text-white hover:underline font-semibold"
+          }
+        >
+          Pickup location
+        </NavLink>
+        <NavLink
+          to="/feepayment"
+          className={({ isActive }) =>
+            isActive ? "text-orange-500 underline font-bold" : "text-white hover:underline font-semibold"
+          }
+        >
+          Fee Payment
+        </NavLink>
       </div>
     </nav>
   );

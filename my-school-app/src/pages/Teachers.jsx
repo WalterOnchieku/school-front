@@ -172,7 +172,7 @@ const TeachersPage = () => {
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium mb-1">Date of Admission:</label>
+                        <label className="block text-sm font-medium mb-1">Date of Recruitment:</label>
                         <input
                             type="date"
                             name="date_of_admission"
@@ -215,7 +215,7 @@ const TeachersPage = () => {
                         <tr>
                             <th className="border border-gray-300 p-2">First Name</th>
                             <th className="border border-gray-300 p-2">Last Name</th>
-                            <th className="border border-gray-300 p-2">Date of Admission</th>
+                            <th className="border border-gray-300 p-2">Date of Recruitment</th>
                             <th className="border border-gray-300 p-2">Subject</th>
                             <th className="border border-gray-300 p-2">Actions</th>
                         </tr>

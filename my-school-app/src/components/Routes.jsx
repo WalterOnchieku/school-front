@@ -8,6 +8,9 @@ import Scores from '../pages/Scores';
 import ClassesPage from '../pages/Classes';
 import StudentReport from '../pages/Reports';
 import Dashboard from '../pages/Dashboard';
+import FeeManagement from '../pages/FeeManagement';
+import FeePayments from '../pages/FeePayment';
+import PickupLocations from '../pages/PickupLocations';
 
 // const Students = () => <h2>Students Page</h2>;
 // const Teachers = () => <h2>Teachers Page</h2>;
@@ -28,6 +31,9 @@ const AppRoutes = () => {
         <Route path="/scores" element={<Scores />} />
         <Route path="/classes" element={<ClassesPage />} />
         <Route path="/reports" element={<StudentReport />} />
+        <Route path="/fees" element={<FeeManagement />} />
+        <Route path="/feepayment" element={<FeePayments />} />
+        <Route path="/pickup-location" element={<PickupLocations />} />
       </Routes>
     </Router>
   );

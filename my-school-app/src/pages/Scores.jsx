@@ -230,8 +230,9 @@ const Scores = () => {
             name="year"
             value={formData.year}
             onChange={handleInputChange}
-            placeholder="Year (Optional)"
+            placeholder="Year"
             className="border rounded p-2"
+            required
           />
         </div>
         <button

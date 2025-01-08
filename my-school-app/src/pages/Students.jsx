@@ -214,7 +214,7 @@ const StudentsPage = () => {
                         <option value="">Select Class</option>
                         {classes.map((cls) => (
                             <option key={cls.id} value={cls.id}>
-                                {cls.name}
+                                {cls.class_name}
                             </option>
                         ))}
                     </select>

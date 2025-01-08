@@ -32,7 +32,7 @@ const StudentReport = () => {
     <Document>
       <Page style={styles.page}>
         <View style={styles.section}>
-          <Text style={styles.header}>Student Report</Text>
+          <Text style={styles.header}>Student Report Card</Text>
           <Text>Student ID: {report.student_id}</Text>
           <Text>Term: {report.term}</Text>
           <Text>Year: {report.year}</Text>
@@ -46,6 +46,7 @@ const StudentReport = () => {
               <Text style={[styles.tableCell, styles.headerCell]}>Subject Name</Text>
               <Text style={[styles.tableCell, styles.headerCell]}>Score</Text>
               <Text style={[styles.tableCell, styles.headerCell]}>Grade</Text>
+              <Text style={[styles.tableCell, styles.headerCell]}>Remarks</Text>
             </View>
             {/* Table Rows */}
             {report.subjects.map((subject, index) => (
@@ -53,6 +54,7 @@ const StudentReport = () => {
                 <Text style={styles.tableCell}>{subject.subject_name}</Text>
                 <Text style={styles.tableCell}>{subject.score || "N/A"}</Text>
                 <Text style={styles.tableCell}>{subject.grade || "N/A"}</Text>
+                <Text style={styles.tableCell}></Text>
               </View>
             ))}
           </View>
@@ -65,11 +67,11 @@ const StudentReport = () => {
   const styles = StyleSheet.create({
     page: { padding: 30 },
     section: { marginBottom: 10 },
-    header: { fontSize: 18, marginBottom: 10, fontWeight: 'bold' },
-    subHeader: { fontSize: 14, marginTop: 10, fontWeight: 'bold' },
+    header: { fontSize: 14, marginBottom: 10, fontWeight: 'bold' },
+    subHeader: { fontSize: 12, marginTop: 10, fontWeight: 'bold' },
     table: { display: "table", width: "auto", borderStyle: "solid", borderWidth: 1, borderColor: "#bfbfbf", marginTop: 10 },
     tableRow: { flexDirection: "row" },
-    tableCell: { margin: 5, fontSize: 10, flex: 1, textAlign: "center", borderStyle: "solid", borderWidth: 1, borderColor: "#bfbfbf" },
+    tableCell: { margin: 0, fontSize: 10, flex: 1, textAlign: "center", borderStyle: "solid", borderWidth: 1, borderColor: "#bfbfbf" },
     headerCell: { fontWeight: "bold", backgroundColor: "#f0f0f0" },
   });
   
