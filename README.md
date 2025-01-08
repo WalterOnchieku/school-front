@@ -78,7 +78,7 @@ A comprehensive web application for managing students, teachers, classes, scores
 - Python (for running the Flask backend)
 
 ### Frontend Setup
-1. Navigate to the `frontend` folder:
+1. Navigate to the `my-school-app` folder:
    ```bash
    cd frontend
    ```
@@ -88,14 +88,15 @@ A comprehensive web application for managing students, teachers, classes, scores
    ```
 3. Start the React development server:
    ```bash
-   npm start
+   npm run dev
    ```
    
 
 ### Backend Setup
-1. Navigate to the `backend` folder:
+The backend will be on a separate Repository: https://github.com/WalterOnchieku/school-back
+ 1. After forking and cloning, do the following:
    ```bash
-   cd backend
+   cd school
    ```
 2. Create a virtual environment and activate it:
    ```bash
