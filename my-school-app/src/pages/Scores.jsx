@@ -140,7 +140,7 @@ const Scores = () => {
             name="student_id"
             value={filters.student_id}
             onChange={handleFilterChange}
-            placeholder="Student ID"
+            placeholder="Admission No."
             className="border rounded p-2"
           />
           <select
@@ -186,7 +186,7 @@ const Scores = () => {
             name="student_id"
             value={formData.student_id}
             onChange={handleInputChange}
-            placeholder="Student ID"
+            placeholder="Admission No."
             className="border rounded p-2"
             required
           />

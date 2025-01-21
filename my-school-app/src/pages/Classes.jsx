@@ -163,7 +163,7 @@ const ClassesPage = () => {
             <table className="table-auto w-full border-collapse border border-gray-300">
                 <thead>
                     <tr>
-                        <th className="border border-gray-300 p-2">ID</th>
+                        {/* <th className="border border-gray-300 p-2">ID</th> */}
                         <th className="border border-gray-300 p-2">Class Name</th>
                         <th className="border border-gray-300 p-2">Teacher</th>
                         <th className="border border-gray-300 p-2">Actions</th>
@@ -172,7 +172,7 @@ const ClassesPage = () => {
                 <tbody>
                     {classes.map((class_) => (
                         <tr key={class_.id}>
-                            <td className="border border-gray-300 p-2">{class_.id}</td>
+                            {/* <td className="border border-gray-300 p-2">{class_.id}</td> */}
                             <td className="border border-gray-300 p-2">{class_.class_name}</td>
                             <td className="border border-gray-300 p-2">
                                 {teachers.find((teacher) => teacher.id === class_.teacher_id)?.name || "N/A"}
