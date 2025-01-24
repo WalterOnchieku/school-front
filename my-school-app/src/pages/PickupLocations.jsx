@@ -11,7 +11,7 @@ const PickupLocations = () => {
 
   const fetchLocations = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/pickup-location");
+      const response = await axios.get("https://school-back-z4bc.onrender.com/pickup-location");
       setLocations(response.data);
     } catch (error) {
       console.error("Error fetching locations:", error);
@@ -22,7 +22,7 @@ const PickupLocations = () => {
   const handleLocationSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:5000/pickup-location", newLocation);
+      const response = await axios.post("https://school-back-z4bc.onrender.com/pickup-location", newLocation);
       toast.success("Pickup location added successfully");
       setLocations([...locations, response.data.location]); // Append the new location to the list
       setNewLocation({

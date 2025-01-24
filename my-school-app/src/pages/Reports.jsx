@@ -17,7 +17,7 @@ const StudentReport = () => {
 
     try {
       const response = await axios.get(
-        `http://127.0.0.1:5000/report/${studentId}/${term}/${year}`
+        `https://school-back-z4bc.onrender.com/report/${studentId}/${term}/${year}`
       );
       setReport(response.data);
     } catch (error) {

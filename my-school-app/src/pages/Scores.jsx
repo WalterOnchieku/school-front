@@ -33,7 +33,7 @@ const Scores = () => {
 
   const fetchScores = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/score_grades");
+      const response = await axios.get("https://school-back-z4bc.onrender.com/score_grades");
       setScores(response.data);
     } catch (error) {
       toast.error("Failed to fetch scores");
@@ -42,7 +42,7 @@ const Scores = () => {
 
   const fetchSubjects = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/subjects");
+      const response = await axios.get("https://school-back-z4bc.onrender.com/subjects");
       setSubjects(response.data);
     } catch (error) {
       toast.error("Failed to fetch subjects");
@@ -51,7 +51,7 @@ const Scores = () => {
 
   const fetchClasses = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/classes");
+      const response = await axios.get("https://school-back-z4bc.onrender.com/classes");
       setClasses(response.data);
     } catch (error) {
       toast.error("Failed to fetch classes");
@@ -70,10 +70,10 @@ const Scores = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`http://127.0.0.1:5000/score_grades/${editingId}`, formData);
+        await axios.put(`https://school-back-z4bc.onrender.com/score_grades/${editingId}`, formData);
         toast.success("Score updated successfully");
       } else {
-        await axios.post("http://127.0.0.1:5000/score_grades", formData);
+        await axios.post("https://school-back-z4bc.onrender.com/score_grades", formData);
         toast.success("Score added successfully");
       }
       setFormData({
@@ -104,7 +104,7 @@ const Scores = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this score?")) return;
     try {
-      await axios.delete(`http://127.0.0.1:5000/score_grades/${id}`);
+      await axios.delete(`https://school-back-z4bc.onrender.com/score_grades/${id}`);
       toast.success("Score deleted successfully");
       fetchScores();
     } catch (error) {

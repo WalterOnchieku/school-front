@@ -29,7 +29,7 @@ const TeachersPage = () => {
         try {
             const query = searchQuery ? `&search=${searchQuery}` : "";
             const response = await axios.get(
-                `http://127.0.0.1:5000/teachers?page=${pagination.currentPage}${query}`
+                `https://school-back-z4bc.onrender.com/teachers?page=${pagination.currentPage}${query}`
             );
             const data = response.data;
             setTeachers(data.teachers);
@@ -46,7 +46,7 @@ const TeachersPage = () => {
 
     const fetchSubjects = async () => {
         try {
-            const response = await axios.get("http://127.0.0.1:5000/subjects");
+            const response = await axios.get("https://school-back-z4bc.onrender.com/subjects");
             setSubjects(response.data);
         } catch (error) {
             toast.error("Failed to fetch subjects");
@@ -64,7 +64,7 @@ const TeachersPage = () => {
                 toast.error("All fields are required.");
                 return;
             }
-            await axios.post("http://127.0.0.1:5000/teachers", formData);
+            await axios.post("https://school-back-z4bc.onrender.com/teachers", formData);
             toast.success("Teacher created successfully!");
             fetchTeachers();
             setFormData({
@@ -84,7 +84,7 @@ const TeachersPage = () => {
 
     const handleDeleteTeacher = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:5000/teachers/${id}`);
+            await axios.delete(`https://school-back-z4bc.onrender.com/teachers/${id}`);
             toast.success("Teacher deleted successfully!");
             fetchTeachers();
         } catch (error) {
@@ -107,7 +107,7 @@ const TeachersPage = () => {
                 return;
             }
             await axios.put(
-                `http://127.0.0.1:5000/teachers/${editingTeacher.id}`,
+                `https://school-back-z4bc.onrender.com/teachers/${editingTeacher.id}`,
                 editingTeacher
             );
             toast.success("Teacher updated successfully!");

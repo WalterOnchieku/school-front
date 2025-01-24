@@ -33,7 +33,7 @@ const StudentsPage = () => {
   const fetchStudents = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/students?page=${pagination.currentPage}&per_page=10`
+        `https://school-back-z4bc.onrender.com/students?page=${pagination.currentPage}&per_page=10`
       );
       const data = await response.json();
       setStudents(data.students);
@@ -46,7 +46,7 @@ const StudentsPage = () => {
 
   const fetchPickupLocations = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/pickup-location");
+      const response = await fetch("https://school-back-z4bc.onrender.com/pickup-location");
       const data = await response.json();
       setPickupLocations(data);
     } catch (error) {
@@ -57,7 +57,7 @@ const StudentsPage = () => {
 
   const fetchClasses = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/classes");
+      const response = await fetch("https://school-back-z4bc.onrender.com/classes");
       const data = await response.json();
       setClasses(data);
     } catch (error) {
@@ -73,8 +73,8 @@ const StudentsPage = () => {
   const handleAddOrEditStudent = async (e) => {
     e.preventDefault();
     const url = editingStudent
-      ? `http://127.0.0.1:5000/students/${editingStudent.id}`
-      : "http://127.0.0.1:5000/students";
+      ? `https://school-back-z4bc.onrender.com/students/${editingStudent.id}`
+      : "https://school-back-z4bc.onrender.com/students";
     const method = editingStudent ? "PUT" : "POST";
 
     try {
@@ -113,7 +113,7 @@ const StudentsPage = () => {
 
   const handleDelete = async (studentId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/students/${studentId}`, {
+      const response = await fetch(`https://school-back-z4bc.onrender.com/students/${studentId}`, {
         method: "DELETE",
       });
       if (!response.ok) throw new Error(await response.text());

@@ -23,7 +23,7 @@ const FeeManagement = () => {
 
   const fetchFeeStructures = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/fee-structure");
+      const response = await axios.get("https://school-back-z4bc.onrender.com/fee-structure");
       setFeeStructures(response.data);
     } catch (error) {
       toast.error("Failed to fetch fee structures");
@@ -33,7 +33,7 @@ const FeeManagement = () => {
 
   const fetchClasses = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/classes");
+      const response = await axios.get("https://school-back-z4bc.onrender.com/classes");
       setClasses(response.data);
     } catch (error) {
       toast.error("Failed to fetch classes");
@@ -45,10 +45,10 @@ const FeeManagement = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`http://127.0.0.1:5000/fee-structure/${editingId}`, formData);
+        await axios.put(`https://school-back-z4bc.onrender.com/fee-structure/${editingId}`, formData);
         toast.success("Fee structure updated successfully");
       } else {
-        await axios.post("http://127.0.0.1:5000/fee-structure", formData);
+        await axios.post("https://school-back-z4bc.onrender.com/fee-structure", formData);
         toast.success("Fee structure added successfully");
       }
       fetchFeeStructures();
@@ -61,7 +61,7 @@ const FeeManagement = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://127.0.0.1:5000/fee-structure/${id}`);
+      await axios.delete(`https://school-back-z4bc.onrender.com/fee-structure/${id}`);
       fetchFeeStructures();
       toast.success("Fee structure deleted successfully");
     } catch (error) {

@@ -10,7 +10,7 @@ const SubjectsPage = () => {
   // Fetch all subjects
   const fetchSubjects = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/subjects");
+      const response = await fetch("https://school-back-z4bc.onrender.com/subjects");
       if (response.ok) {
         const data = await response.json();
         setSubjects(data);
@@ -29,7 +29,7 @@ const SubjectsPage = () => {
   // Add a new subject
   const addSubject = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/subjects", {
+      const response = await fetch("https://school-back-z4bc.onrender.com/subjects", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const SubjectsPage = () => {
   // Update a subject
   const updateSubject = async (subjectId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/subjects/${subjectId}`, {
+      const response = await fetch(`https://school-back-z4bc.onrender.com/subjects/${subjectId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const SubjectsPage = () => {
   // Delete a subject
   const deleteSubject = async (subjectId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/subjects/${subjectId}`, {
+      const response = await fetch(`https://school-back-z4bc.onrender.com/subjects/${subjectId}`, {
         method: "DELETE",
       });
 

@@ -14,11 +14,11 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       try {
         const [summaryRes, notificationsRes, enrollmentRes, subjectRes, linksRes] = await Promise.all([
-          axios.get("http://127.0.0.1:5000/dashboard/summary"),
-          axios.get("http://127.0.0.1:5000/dashboard/notifications"),
-          axios.get("http://127.0.0.1:5000/dashboard/chart/enrollment"),
-          axios.get("http://127.0.0.1:5000/dashboard/chart/subject-popularity"),
-          axios.get("http://127.0.0.1:5000/dashboard/quick-links"),
+          axios.get("https://school-back-z4bc.onrender.com/dashboard/summary"),
+          axios.get("https://school-back-z4bc.onrender.com/dashboard/notifications"),
+          axios.get("https://school-back-z4bc.onrender.com/dashboard/chart/enrollment"),
+          axios.get("https://school-back-z4bc.onrender.com/dashboard/chart/subject-popularity"),
+          axios.get("https://school-back-z4bc.onrender.com/dashboard/quick-links"),
         ]);
 
         setSummary(summaryRes.data || {});

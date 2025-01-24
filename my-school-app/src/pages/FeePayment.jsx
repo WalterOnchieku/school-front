@@ -17,7 +17,7 @@ const FeePayments = () => {
 
   const fetchPayments = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/fee-payment");
+      const response = await axios.get("https://school-back-z4bc.onrender.com/fee-payment");
       setPayments(response.data.fee_payments);
     } catch (error) {
       console.error("Error fetching payments:", error);
@@ -27,7 +27,7 @@ const FeePayments = () => {
 
   const fetchPickupLocations = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/pickup-location");
+      const response = await axios.get("https://school-back-z4bc.onrender.com/pickup-location");
       setPickupLocations(response.data);
     } catch (error) {
       console.error("Error fetching pickup locations:", error);
@@ -38,7 +38,7 @@ const FeePayments = () => {
   const handlePaymentSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:5000/fee-payment", newPayment);
+      const response = await axios.post("https://school-back-z4bc.onrender.com/fee-payment", newPayment);
       toast.success("Payment added successfully");
       setPayments([...payments, response.data.fee_payment]);
       setNewPayment({

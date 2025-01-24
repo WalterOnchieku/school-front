@@ -19,7 +19,7 @@ const ClassesPage = () => {
     // Fetch all classes
     const fetchClasses = async () => {
         try {
-            const response = await fetch("http://127.0.0.1:5000/classes");
+            const response = await fetch("https://school-back-z4bc.onrender.com/classes");
             const data = await response.json();
             setClasses(data);
         } catch (error) {
@@ -31,7 +31,7 @@ const ClassesPage = () => {
     // Fetch all teachers
     const fetchTeachers = async () => {
         try {
-            const response = await fetch("http://127.0.0.1:5000/teachers?page=1&per_page=100");
+            const response = await fetch("https://school-back-z4bc.onrender.com/teachers?page=1&per_page=100");
             const data = await response.json();
 
             if (Array.isArray(data.teachers)) {
@@ -59,7 +59,7 @@ const ClassesPage = () => {
     const handleCreateClass = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://127.0.0.1:5000/classes", {
+            const response = await fetch("https://school-back-z4bc.onrender.com/classes", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -80,7 +80,7 @@ const ClassesPage = () => {
     // Handle class deletion
     const handleDeleteClass = async (id) => {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/classes/${id}`, {
+            const response = await fetch(`https://school-back-z4bc.onrender.com/classes/${id}`, {
                 method: "DELETE",
             });
             if (response.ok) {
@@ -103,7 +103,7 @@ const ClassesPage = () => {
     const handleUpdateClass = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://127.0.0.1:5000/classes/${editingClass.id}`, {
+            const response = await fetch(`https://school-back-z4bc.onrender.com/classes/${editingClass.id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(editingClass),
